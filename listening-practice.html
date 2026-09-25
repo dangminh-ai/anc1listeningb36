@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B2 First (FCE) - Luyện nghe: Buổi học &amp; Bài tập về nhà</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #16241f;
+    --ink-soft: #4b5b54;
+    --paper: #f4efe4;
+    --paper-card: #fffdf8;
+    --line: #ddd3bd;
+    --pine: #10362b;
+    --pine-light: #1c5240;
+    --gold: #b4863b;
+    --gold-soft: #e8d6ac;
+    --terracotta: #a8492f;
+    --ok: #1c6e4a;
+    --ok-bg: #e4f2ea;
+    --bad: #a8402d;
+    --bad-bg: #fbe9e4;
+    --shadow: 0 10px 30px -14px rgba(16,54,43,0.28);
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    line-height: 1.7;
+  }
+  ::selection { background: var(--gold-soft); }
+
+  .top-bar {
+    background: linear-gradient(155deg, var(--pine) 0%, #0c2a21 65%, #0a231b 100%);
+    color: #f4efe4;
+    padding: 30px 22px 24px 22px;
+    text-align: center;
+  }
+  .top-bar .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--gold-soft); margin: 0 0 10px 0; opacity: 0.9;
+  }
+  .top-bar h1 {
+    margin: 0 0 8px 0;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700; font-size: 27px;
+  }
+  .top-bar p { margin: 0; font-family: 'Inter', sans-serif; font-size: 13px; color: #d9e4dc; }
+  .divider-orn { width: 64px; height: 2px; margin: 15px auto 0 auto; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+
+  .container { max-width: 880px; margin: 0 auto; padding: 24px 18px 70px 18px; }
+
+  .guide-box {
+    background: var(--paper-card); border: 1px solid var(--line);
+    border-left: 4px solid var(--gold); border-radius: 10px;
+    padding: 18px 20px; margin-bottom: 22px; box-shadow: var(--shadow);
+    font-family: 'Inter', sans-serif; font-size: 13.5px; color: var(--ink-soft);
+  }
+  .guide-box h3 { margin: 0 0 10px 0; font-family: 'Playfair Display', Georgia, serif; color: var(--pine); font-size: 17px; }
+  .guide-box ul { margin: 0; padding-left: 20px; }
+  .guide-box li { margin-bottom: 6px; line-height: 1.6; }
+  .guide-box strong { color: var(--pine); }
+
+  .name-box {
+    background: var(--paper-card); border: 1px solid var(--line);
+    border-left: 4px solid var(--gold); border-radius: 10px;
+    padding: 18px 20px; margin-bottom: 24px; box-shadow: var(--shadow);
+  }
+  .name-box label {
+    display: block; margin-bottom: 8px; font-weight: 700;
+    font-family: 'Inter', sans-serif; font-size: 12.5px; letter-spacing: 0.3px;
+    color: var(--pine); text-transform: uppercase;
+  }
+  .name-box input {
+    width: 100%; padding: 10px 12px; font-size: 15px;
+    font-family: 'Source Serif 4', Georgia, serif;
+    border: 1px solid #c9bfa6; border-radius: 6px; background: #fffefb;
+  }
+  .name-box input:focus { outline: 2px solid var(--gold-soft); border-color: var(--gold); }
+  .name-box.field-error input { border-color: var(--bad); }
+  .name-error { display: none; color: var(--bad); font-family: 'Inter', sans-serif; font-size: 12.5px; font-weight: 600; margin-top: 8px; }
+  .name-box.field-error .name-error { display: block; }
+
+  .tab-row { display: flex; gap: 10px; margin-bottom: 24px; }
+  .tab-btn {
+    flex: 1; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px;
+    padding: 13px 10px; border-radius: 10px; border: 1px solid var(--pine);
+    background: var(--paper-card); color: var(--pine); cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .tab-btn.active { background: var(--pine); color: #f4efe4; }
+  .tab-btn:hover { box-shadow: var(--shadow); }
+
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  .part-header {
+    margin: 34px 0 6px 0; padding-bottom: 8px; border-bottom: 3px solid var(--pine);
+  }
+  .part-header h2 { margin: 0; font-size: 19px; font-family: 'Playfair Display', Georgia, serif; color: var(--pine); }
+  .part-header:first-child { margin-top: 0; }
+
+  .sub-header {
+    font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px; color: #fffdf8;
+    background: var(--pine-light); display: inline-block; padding: 6px 14px; border-radius: 999px;
+    margin: 22px 0 10px 0;
+  }
+
+  .listening-card {
+    background: linear-gradient(165deg, #fffdf8 0%, #f2ecda 100%);
+    border: 1px solid var(--gold-soft); border-left: 4px solid var(--pine);
+    border-radius: 12px; padding: 17px 19px; margin: 8px 0 18px 0; box-shadow: var(--shadow);
+  }
+  .listening-head { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
+  .listening-icon { font-size: 21px; line-height: 1; }
+  .listening-title { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14.5px; color: var(--pine); }
+  .listening-sub { font-family: 'Inter', sans-serif; font-size: 11.5px; color: var(--ink-soft); margin-top: 3px; font-style: italic; }
+  .listen-btn {
+    font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13px;
+    border: none; border-radius: 999px; padding: 10px 20px; cursor: pointer;
+    background: var(--pine); color: #f4efe4; transition: background 0.15s ease;
+  }
+  .listen-btn:hover:not(:disabled) { background: var(--pine-light); }
+  .listen-btn:disabled { background: #c9c2ac; color: #7a7460; cursor: not-allowed; }
+  .listen-progress { width: 100%; height: 8px; border-radius: 6px; background: #e3dcc9; border: 1px solid var(--line); overflow: hidden; margin-top: 9px; }
+  .listen-progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--gold), var(--pine-light)); transition: width 0.25s linear; }
+  .listen-status { font-family: 'Inter', sans-serif; font-size: 11.5px; color: var(--ink-soft); margin-top: 7px; }
+  .listen-status.warn { color: var(--terracotta); font-weight: 600; }
+
+  .card {
+    background: var(--paper-card); border: 1px solid var(--line); border-radius: 10px;
+    padding: 15px 17px; margin-bottom: 11px; transition: border-color 0.15s ease;
+  }
+  .q-text { font-size: 15px; margin-bottom: 9px; }
+  .q-num {
+    display: inline-block; font-weight: 700; color: #fff; margin-right: 8px;
+    background: var(--pine); border-radius: 6px; padding: 1px 8px;
+    font-family: 'Inter', sans-serif; font-size: 12.5px;
+  }
+  .options-grid { display: grid; gap: 7px; margin-top: 7px; }
+  .option-label {
+    display: flex; align-items: center; gap: 9px; font-size: 14px; padding: 9px 11px;
+    border: 1px solid #d8cfb6; border-radius: 8px; background: #fffefb; cursor: pointer;
+    transition: all 0.12s ease;
+  }
+  .option-label:hover { border-color: var(--gold); background: #fbf6e9; }
+  .option-label input { accent-color: var(--pine); width: 15px; height: 15px; }
+  .option-label.correct { background: var(--ok-bg); border-color: var(--ok); }
+  .option-label.incorrect { background: var(--bad-bg); border-color: var(--bad); }
+  .text-input {
+    width: 100%; padding: 9px 11px; font-size: 14px;
+    font-family: 'Source Serif 4', Georgia, serif;
+    border: 1px solid #c9bfa6; border-radius: 6px; background: #fffefb; margin-top: 2px;
+  }
+  .text-input:focus { outline: 2px solid var(--gold-soft); border-color: var(--gold); }
+  .text-input.correct { background: var(--ok-bg); border-color: var(--ok); }
+  .text-input.incorrect { background: var(--bad-bg); border-color: var(--bad); }
+  .answer-note {
+    display: none; margin-top: 9px; font-family: 'Inter', sans-serif; font-size: 12.5px;
+    color: var(--ink-soft); background: #fbf4e2; border: 1px solid var(--gold-soft);
+    border-radius: 8px; padding: 8px 11px; line-height: 1.55;
+  }
+  .answer-note.show { display: block; }
+  .answer-note strong { color: var(--pine); }
+
+  .submit-row { text-align: center; margin: 24px 0 8px 0; }
+  .btn-submit {
+    font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14.5px;
+    border-radius: 999px; padding: 13px 30px; border: none; cursor: pointer;
+    background: var(--pine); color: #f4efe4; transition: background 0.15s ease;
+  }
+  .btn-submit:hover { background: var(--pine-light); }
+
+  .score-box {
+    display: none; margin-top: 20px; background: linear-gradient(160deg, #10362b, #0c2a21);
+    color: #f4efe4; border-radius: 12px; padding: 20px 22px; box-shadow: var(--shadow);
+    text-align: center;
+  }
+  .score-box p { margin: 5px 0; font-family: 'Inter', sans-serif; font-size: 13.5px; }
+  .score-box strong { color: var(--gold-soft); font-size: 21px; }
+
+  .attempts-box {
+    margin-top: 16px; background: var(--paper-card); border: 1px solid var(--line);
+    border-radius: 10px; padding: 14px 17px;
+  }
+  .attempts-box h4 { margin: 0 0 8px 0; font-family: 'Inter', sans-serif; font-size: 12.5px; letter-spacing: 0.3px; text-transform: uppercase; color: var(--pine); }
+  .attempts-table { width: 100%; border-collapse: collapse; font-family: 'Inter', sans-serif; font-size: 13px; }
+  .attempts-table th, .attempts-table td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+  .attempts-table th { color: var(--ink-soft); font-weight: 600; font-size: 12px; }
+  .attempts-empty { font-family: 'Inter', sans-serif; font-size: 12.5px; color: var(--ink-soft); font-style: italic; }
+
+  @media (max-width: 600px) {
+    .top-bar h1 { font-size: 21px; }
+    .container { padding: 18px 12px 60px 12px; }
+    .tab-row { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <p class="eyebrow">Advanced English &middot; Luyện nghe</p>
+  <h1>B2 First (FCE) &middot; Listening Practice</h1>
+  <p>Buổi học trên lớp và bài tập về nhà đi kèm, cùng một cặp bài nghe</p>
+  <div class="divider-orn"></div>
+</div>
+
+<div class="container">
+
+  <div class="guide-box">
+    <h3>Trước khi bắt đầu</h3>
+    <ul>
+      <li>Mỗi bài nghe chỉ được phát <strong>tối đa 2 lượt</strong>, không tua đi tua lại được, nên các em nghe thật tập trung nha.</li>
+      <li><strong>Bắt buộc ghi tên</strong> trước khi nộp bài, ở khung dưới đây.</li>
+      <li>Em có thể <strong>nộp bài nhiều lần</strong> để luyện lại (mỗi lần nộp sẽ được ghi vào bảng "Lịch sử làm bài" bên dưới câu hỏi cuối cùng của từng phần), nhưng lượt nghe thì không được cấp lại đâu nha.</li>
+      <li>Sau khi nộp, câu đúng sẽ hiện màu xanh, câu sai hiện màu đỏ kèm gợi ý ngắn để em tự đối chiếu lại.</li>
+    </ul>
+  </div>
+
+  <div class="name-box" id="nameBox">
+    <label for="studentName">Họ và tên học sinh</label>
+    <input type="text" id="studentName" placeholder="Nhập họ tên đầy đủ">
+    <div class="name-error" id="nameError">Nhớ ghi tên trước khi nộp bài nha em.</div>
+  </div>
+
+  <div class="tab-row">
+    <button type="button" class="tab-btn active" data-tab="classwork">📘 Bài trên lớp</button>
+    <button type="button" class="tab-btn" data-tab="homework">🏠 Bài tập về nhà</button>
+  </div>
+
+  <div class="panel active" id="panel-classwork"></div>
+  <div class="panel" id="panel-homework"></div>
+
+</div>
+
+<script>
+// ===================== DATA =====================
+const AUDIO_1 = "https://englishpracticetest.net/wp-content/uploads/2022/01/fce-practice-listening-test-23-part-1.mp3?_=1";
+const AUDIO_2 = "https://englishpracticetest.net/wp-content/uploads/2022/01/fce-practice-listening-test-23-part-2.mp3?_=2";
+
+const CLASSWORK_MC = [
+  { num: 1, text: "You hear a man talking about planting flower seeds in his garden.<br><em>When does he expect them to grow?</em>", options: ["June", "May", "April"], answer: 0 },
+  { num: 2, text: "You hear two friends talking about when they last met.<br><em>What was the occasion?</em>", options: ["a birthday party", "a wedding", "a Christmas party"], answer: 1 },
+  { num: 3, text: "You hear a woman talking about the kind of book she currently enjoys reading.<br><em>What kind of book is it?</em>", options: ["romance", "detective novel", "fairytale"], answer: 2 },
+  { num: 4, text: "You hear two friends discussing the sports they play.<br><em>Which sport do they most enjoy playing?</em>", options: ["basketball", "tennis", "volleyball"], answer: 1 },
+  { num: 5, text: "You hear a shop assistant talking to a customer.<br><em>What is the customer looking for?</em>", options: ["a shirt", "a suit", "a sweater"], answer: 0 },
+  { num: 6, text: "You hear a man talking about his job as a lighting technician in a theatre.<br><em>How does he feel about tonight's performance?</em>", options: ["concerned about making mistakes", "surprised to be so nervous about the experience", "excited about working in live theatre"], answer: 2 },
+  { num: 7, text: "You hear a boy talking about school.<br><em>Which subject does he like best?</em>", options: ["maths", "art", "history"], answer: 1 },
+  { num: 8, text: "You hear a travel agent talking about a journey.<br><em>What is the customer's final destination?</em>", options: ["Houston", "New York", "Los Angeles"], answer: 0 }
+];
+
+const CLASSWORK_BLANKS = [
+  { num: 9, text: "Tom mentions business, news, sport and _____ as examples of what journalists write about.", answers: ["culture"] },
+  { num: 10, text: "Many journalists have a degree in journalism, though Tom took his in _____.", answers: ["economics"] },
+  { num: 11, text: "Tom says it's important to gain a certificate in reporting, carrying out _____ and editing.", answers: ["interviews", "interviewing"] },
+  { num: 12, text: "When applying for a job, Tom says you need to show a selection of _____ you've written.", answers: ["articles"] },
+  { num: 13, text: "Tom got experience of writing by working as a _____ on a student magazine.", answers: ["film critic"] },
+  { num: 14, text: "Tom says journalists must have good communication and _____ skills, in addition to personal characteristics such as motivation.", answers: ["organisation", "organization"] },
+  { num: 15, text: "Tom was able to demonstrate to employers his experience of _____.", answers: ["web design"] },
+  { num: 16, text: "As a junior reporter, Tom was pleased to attend _____ as well as other local events.", answers: ["football matches"] },
+  { num: 17, text: "In Tom's present job, he has a range of responsibilities and most enjoys doing _____.", answers: ["research"] },
+  { num: 18, text: "Tom is currently exploring the idea of working as a _____ on the paper.", answers: ["photographer"] }
+];
+
+const HW_SECTION_1 = [
+  { num: 19, type: "mc", text: "In Situation 1, the man suggests planting seeds in April rather than earlier because:", options: ["April offers higher rainfall for fast germination.", "there is less risk of late ground frost damaging seedlings.", "local suppliers only stock seeds after winter finishes."], answer: 1, explain: `Gợi ý: người này nói lý do liên quan đến sương giá muộn, không phải mưa hay nguồn cung hạt giống.` },
+  { num: 20, type: "tf", text: "In Situation 2, the female speaker was unable to attend Michael's 21st birthday party because she had contracted an illness right before the event.", answer: true, explain: `Gợi ý: cô ấy nhắc đến việc bị ốm vào phút chót, đúng như câu này mô tả.` },
+  { num: 21, type: "mc", text: "In Situation 3, why did the woman lose interest in detective fiction?", options: ["The plots and themes began to feel formulaic and repetitive.", "She found it too hard to determine who committed the crime.", "The storylines lacked emotional depth compared to modern fairy tales."], answer: 0, explain: `Gợi ý: cô ấy nói các chủ đề bắt đầu lặp đi lặp lại theo thời gian.` },
+  { num: 22, type: "tf", text: "In Situation 4, the speakers actively play volleyball together, and it is considered their second-best sport after tennis.", answer: false, explain: `Gợi ý: bóng chuyền chỉ được nhắc đến, họ không thật sự đam mê hay chơi môn này thường xuyên.` },
+  { num: 23, type: "mc", text: "In Situation 5, what was the customer's main hesitation regarding the sweater he tried on?", options: ["The fit was uncomfortably loose around the collar.", "The fabric was far too casual for a business conference.", "He was not completely convinced by the shade or color."], answer: 2, explain: `Gợi ý: khách hàng băn khoăn về màu sắc, không phải form dáng hay chất liệu.` },
+  { num: 24, type: "tf", text: "In Situation 6, the lighting technician worries that minor mistakes made during the show will severely compromise the audience's overall enjoyment.", answer: false, explain: `Gợi ý: anh ấy nói dù có sai sót nhỏ thì khán giả cũng khó nhận ra, nên không quá lo lắng.` },
+  { num: 25, type: "mc", text: "In Situation 7, the boy finds mathematics unchallenging because:", options: ["he rarely receives homework assignments that push his limits.", "the subject comes naturally and feels relatively easy to him.", "his teacher dedicates most classroom hours to historical facts."], answer: 1, explain: `Gợi ý: cậu bé nói môn này khá dễ với mình nên không thấy thử thách.` },
+  { num: 26, type: "tf", text: "In Situation 8, the traveler must catch a direct flight from Amsterdam to Houston without any intermediate stops in North America.", answer: false, explain: `Gợi ý: khách phải quá cảnh qua New York trước khi tới Houston, không phải bay thẳng.` }
+];
+
+const HW_SECTION_2 = [
+  { num: 27, type: "mc", text: "What advantage does Tom highlight regarding holding a degree in an unrelated field like music or science?", options: ["It exempts candidates from taking post-graduate certification exams.", "It gives job seekers an edge when targeting niche, specialist media outlets.", "It allows reporters to bypass starting positions on local papers."], answer: 1, explain: `Gợi ý: Tom nói bằng cấp ở lĩnh vực khác giúp em có lợi thế khi xin việc ở các tờ báo chuyên ngành.` },
+  { num: 28, type: "tf", text: "During his training course, Tom found learning the techniques of news reporting significantly more enjoyable than conducting interviews.", answer: false, explain: `Gợi ý: chính học phỏng vấn mới là phần Tom thích nhất trong khóa học, không phải kỹ thuật đưa tin.` },
+  { num: 29, type: "mc", text: "What type of work does Tom advise applicants to submit when creating their portfolio?", options: ["Pieces that have received national journalism awards.", "Academic research papers written during degree studies.", "Work published even in modest, community-level publications."], answer: 2, explain: `Gợi ý: Tom nói bất cứ bài viết nào từng đăng trên báo hay tạp chí địa phương cũng chứng minh được năng lực viết.` },
+  { num: 30, type: "tf", text: "While at university, Tom's closest friend wrote film reviews for the campus magazine alongside him.", answer: false, explain: `Gợi ý: chính Tom là người viết phê bình phim, còn người bạn thân thì viết về các vấn đề sinh viên.` },
+  { num: 31, type: "mc", text: "Aside from pure writing talent, which interpersonal quality does Tom specifically emphasize as necessary for working under pressure?", options: ["Financial management", "Personal persistence and adaptability", "Artistic photography background"], answer: 1, explain: `Gợi ý: Tom nhắc đến sự linh hoạt, kiên trì và động lực cá nhân.` },
+  { num: 32, type: "mc", text: "How did Tom gain his practical experience in website design?", options: ["Through a specialized college multimedia module.", "By freelancing as an intern at a regional newspaper office.", "Through part-time weekend employment at his brother's company."], answer: 2, explain: `Gợi ý: anh trai Tom có công ty thiết kế web riêng, Tom từng làm thêm cuối tuần ở đó.` },
+  { num: 33, type: "tf", text: "As a junior reporter, Tom found covering amateur theatrical performances and school talent shows just as captivating as going to local football fixtures.", answer: false, explain: `Gợi ý: Tom nói những sự kiện đó không hấp dẫn bằng các trận bóng đá địa phương.` },
+  { num: 34, type: "mc", text: "Why does Tom favor working at a regional newspaper over a national publication?", options: ["It provides a shorter commute and better working hours.", "It grants him broader autonomy and a wider range of daily duties.", "It pays a higher commission for investigative research features."], answer: 1, explain: `Gợi ý: Tom nói ở báo địa phương anh có nhiều trách nhiệm hơn so với làm ở báo toàn quốc.` },
+  { num: 35, type: "tf", text: "Tom's current editorial duties include ensuring that the language across all advertising copy remains uniform and consistent.", answer: true, explain: `Gợi ý: Tom xác nhận một trong các việc anh làm là đảm bảo nội dung quảng cáo nhất quán.` },
+  { num: 36, type: "mc", text: "In his present position, which daily publication channel is Tom responsible for curating content for?", options: ["An electronic newsletter", "A nationwide weekend print edition", "A weekly student circular"], answer: 0, explain: `Gợi ý: Tom nhắc đến việc chọn nội dung cho bản tin điện tử hàng ngày.` },
+  { num: 37, type: "mc", text: "Which position do many reporters traditionally aim for as the pinnacle of their editorial career path?", options: ["Chief Investigative Researcher", "Lead Feature Photographer", "Newspaper Editor"], answer: 2, explain: `Gợi ý: Tom nói mục tiêu nghề nghiệp truyền thống của nhiều phóng viên là trở thành tổng biên tập.` },
+  { num: 38, type: "tf", text: "Tom's ultimate career objective is to become the chief subeditor of the regional paper he currently works for.", answer: false, explain: `Gợi ý: Tom thật ra đang cân nhắc hướng đi khác, làm nhiếp ảnh gia, chứ không nhắm tới vị trí biên tập viên.` }
+];
+
+// ===================== HELPERS =====================
+function normalize(s) {
+  return (s || "").toLowerCase().trim().replace(/[.,!?;:'"]/g, "").replace(/\s+/g, " ");
+}
+function make(tag, cls, html) {
+  const r = document.createElement(tag);
+  if (cls) r.className = cls;
+  if (html !== undefined) r.innerHTML = html;
+  return r;
+}
+
+// ===================== AUDIO PLAYERS =====================
+const audioState = {};
+function buildListeningCard(id, url, title, maxPlays) {
+  const card = make("div", "listening-card");
+  card.innerHTML =
+    '<div class="listening-head"><span class="listening-icon">🎧</span><div>' +
+    '<div class="listening-title">' + title + '</div>' +
+    '<div class="listening-sub">Chỉ được nghe tối đa ' + maxPlays + ' lượt, không tua được.</div>' +
+    '</div></div>' +
+    '<audio id="audio_' + id + '" preload="none" src="' + url + '" style="display:none;"></audio>' +
+    '<button type="button" class="listen-btn" id="btn_' + id + '">▶ Nghe bài (còn ' + maxPlays + ' lượt)</button>' +
+    '<div class="listen-progress"><div class="listen-progress-fill" id="fill_' + id + '"></div></div>' +
+    '<div class="listen-status" id="status_' + id + '"></div>';
+
+  audioState[id] = { maxPlays: maxPlays, playsUsed: 0, started: false, lastTime: 0, audioEl: null };
+  setTimeout(() => wireAudio(id), 0);
+  return card;
+}
+
+function wireAudio(id) {
+  const st = audioState[id];
+  const audioEl = document.getElementById("audio_" + id);
+  const btn = document.getElementById("btn_" + id);
+  if (!audioEl || !btn) return;
+  st.audioEl = audioEl;
+
+  audioEl.addEventListener("seeking", () => {
+    if (Math.abs(audioEl.currentTime - st.lastTime) > 0.35) audioEl.currentTime = st.lastTime;
+  });
+  audioEl.addEventListener("timeupdate", () => {
+    st.lastTime = audioEl.currentTime;
+    const dur = audioEl.duration || 0;
+    const fill = document.getElementById("fill_" + id);
+    if (fill && dur > 0) fill.style.width = Math.min(100, (audioEl.currentTime / dur) * 100) + "%";
+  });
+  audioEl.addEventListener("ended", () => onAudioEnded(id));
+  audioEl.addEventListener("play", () => updateAudioButton(id));
+  audioEl.addEventListener("pause", () => updateAudioButton(id));
+
+  btn.addEventListener("click", () => handleAudioClick(id));
+  updateAudioButton(id);
+}
+
+function handleAudioClick(id) {
+  const st = audioState[id];
+  if (!st) return;
+  if (!st.started) {
+    if (st.playsUsed >= st.maxPlays) return;
+    st.started = true;
+    st.playsUsed++;
+    st.lastTime = 0;
+    st.audioEl.currentTime = 0;
+    st.audioEl.play();
+  } else {
+    if (!st.audioEl.paused) st.audioEl.pause();
+    else st.audioEl.play();
+  }
+  updateAudioButton(id);
+}
+
+function onAudioEnded(id) {
+  const st = audioState[id];
+  if (!st) return;
+  st.started = false;
+  const fill = document.getElementById("fill_" + id);
+  if (fill) fill.style.width = "100%";
+  updateAudioButton(id);
+}
+
+function updateAudioButton(id) {
+  const st = audioState[id];
+  const btn = document.getElementById("btn_" + id);
+  const status = document.getElementById("status_" + id);
+  if (!btn || !st) return;
+  const remaining = st.maxPlays - st.playsUsed;
+  if (st.started) {
+    const playing = st.audioEl && !st.audioEl.paused;
+    btn.disabled = false;
+    btn.textContent = playing ? "⏸ Tạm dừng" : "▶ Tiếp tục";
+  } else if (remaining <= 0) {
+    btn.disabled = true;
+    btn.textContent = "✕ Đã hết lượt nghe";
+    if (status) { status.textContent = "Em đã dùng hết lượt nghe cho bài này."; status.classList.add("warn"); }
+  } else {
+    btn.disabled = false;
+    btn.textContent = (st.playsUsed === 0 ? "▶ Nghe bài (còn " : "▶ Nghe lại (còn ") + remaining + " lượt)";
+  }
+}
+
+// ===================== RENDER: CLASSWORK =====================
+const panelClasswork = document.getElementById("panel-classwork");
+
+panelClasswork.appendChild(make("div", "part-header", "<h2>Section 1 &middot; Multiple Choice (Câu 1 - 8)</h2>"));
+panelClasswork.appendChild(buildListeningCard("cw1", AUDIO_1, "Part 1 audio", 2));
+CLASSWORK_MC.forEach(q => {
+  const card = make("div", "card");
+  card.id = "q_cw_" + q.num;
+  let inner = '<div class="q-text"><span class="q-num">' + q.num + '</span>' + q.text + '</div><div class="options-grid">';
+  q.options.forEach((opt, idx) => {
+    const letter = String.fromCharCode(65 + idx);
+    inner += '<label class="option-label"><input type="radio" name="cw_mc_' + q.num + '" value="' + idx + '"> ' + letter + '. ' + opt + '</label>';
+  });
+  inner += '</div>';
+  card.innerHTML = inner;
+  panelClasswork.appendChild(card);
+});
+
+panelClasswork.appendChild(make("div", "part-header", "<h2>Section 2 &middot; Sentence Completion (Câu 9 - 18)</h2>"));
+panelClasswork.appendChild(buildListeningCard("cw2", AUDIO_2, "Part 2 audio", 2));
+CLASSWORK_BLANKS.forEach(q => {
+  const card = make("div", "card");
+  card.id = "q_cw_" + q.num;
+  card.innerHTML = '<div class="q-text"><span class="q-num">' + q.num + '</span>' + q.text + '</div>' +
+    '<input type="text" class="text-input" id="ans_cw_' + q.num + '" placeholder="Nhập câu trả lời" autocomplete="off">';
+  panelClasswork.appendChild(card);
+});
+
+panelClasswork.appendChild(buildSubmitBlock("classwork", "Nộp bài trên lớp"));
+
+// ===================== RENDER: HOMEWORK =====================
+const panelHomework = document.getElementById("panel-homework");
+
+function renderHwQuestion(container, q) {
+  const card = make("div", "card");
+  card.id = "q_hw_" + q.num;
+  let inner = '<div class="q-text"><span class="q-num">' + q.num + '</span>' + q.text + '</div><div class="options-grid">';
+  if (q.type === "mc") {
+    q.options.forEach((opt, idx) => {
+      const letter = String.fromCharCode(65 + idx);
+      inner += '<label class="option-label"><input type="radio" name="hw_' + q.num + '" value="' + idx + '"> ' + letter + '. ' + opt + '</label>';
+    });
+  } else {
+    inner += '<label class="option-label"><input type="radio" name="hw_' + q.num + '" value="true"> Đúng (True)</label>';
+    inner += '<label class="option-label"><input type="radio" name="hw_' + q.num + '" value="false"> Sai (False)</label>';
+  }
+  inner += '</div><div class="answer-note" id="note_hw_' + q.num + '"></div>';
+  card.innerHTML = inner;
+  container.appendChild(card);
+}
+
+panelHomework.appendChild(make("div", "part-header", "<h2>Deep Dive vào Section 1 (Câu 19 - 26)</h2>"));
+panelHomework.appendChild(buildListeningCard("hw1", AUDIO_1, "Part 1 audio (nghe lại)", 2));
+HW_SECTION_1.forEach(q => renderHwQuestion(panelHomework, q));
+
+panelHomework.appendChild(make("div", "part-header", "<h2>Phân tích bài nói của Tom Botham (Câu 27 - 38)</h2>"));
+panelHomework.appendChild(buildListeningCard("hw2", AUDIO_2, "Part 2 audio (nghe lại)", 2));
+HW_SECTION_2.forEach(q => renderHwQuestion(panelHomework, q));
+
+panelHomework.appendChild(buildSubmitBlock("homework", "Nộp bài tập về nhà"));
+
+// ===================== SUBMIT / GRADING =====================
+function buildSubmitBlock(key, label) {
+  const wrap = make("div", "");
+  wrap.innerHTML =
+    '<div class="submit-row"><button type="button" class="btn-submit" id="submit_' + key + '">' + label + '</button></div>' +
+    '<div class="score-box" id="score_' + key + '"></div>' +
+    '<div class="attempts-box"><h4>Lịch sử làm bài</h4><div id="attempts_' + key + '"></div></div>';
+  setTimeout(() => {
+    document.getElementById("submit_" + key).addEventListener("click", () => submitSection(key));
+    renderAttempts(key);
+  }, 0);
+  return wrap;
+}
+
+function checkName() {
+  const nameEl = document.getElementById("studentName");
+  const box = document.getElementById("nameBox");
+  if (!nameEl.value.trim()) {
+    box.classList.add("field-error");
+    nameEl.focus();
+    return false;
+  }
+  box.classList.remove("field-error");
+  return true;
+}
+
+function submitSection(key) {
+  if (!checkName()) return;
+  let correct = 0, total = 0;
+
+  if (key === "classwork") {
+    CLASSWORK_MC.forEach(q => {
+      total++;
+      const checked = document.querySelector('input[name="cw_mc_' + q.num + '"]:checked');
+      const val = checked ? parseInt(checked.value, 10) : null;
+      const ok = val === q.answer;
+      if (ok) correct++;
+      document.querySelectorAll('input[name="cw_mc_' + q.num + '"]').forEach((inp, idx) => {
+        const label = inp.closest(".option-label");
+        label.classList.remove("correct", "incorrect");
+        if (idx === q.answer) label.classList.add("correct");
+        else if (checked && parseInt(checked.value, 10) === idx) label.classList.add("incorrect");
+      });
+    });
+    CLASSWORK_BLANKS.forEach(q => {
+      total++;
+      const inp = document.getElementById("ans_cw_" + q.num);
+      const v = normalize(inp.value);
+      const ok = q.answers.some(a => normalize(a) === v);
+      if (ok) correct++;
+      inp.classList.remove("correct", "incorrect");
+      inp.classList.add(ok ? "correct" : "incorrect");
+    });
+  } else {
+    [HW_SECTION_1, HW_SECTION_2].forEach(section => {
+      section.forEach(q => {
+        total++;
+        const checked = document.querySelector('input[name="hw_' + q.num + '"]:checked');
+        let ok = false;
+        if (checked) {
+          if (q.type === "mc") ok = parseInt(checked.value, 10) === q.answer;
+          else ok = (checked.value === "true") === q.answer;
+        }
+        if (ok) correct++;
+        document.querySelectorAll('input[name="hw_' + q.num + '"]').forEach(inp => {
+          const label = inp.closest(".option-label");
+          label.classList.remove("correct", "incorrect");
+          const isCorrectOpt = q.type === "mc" ? parseInt(inp.value, 10) === q.answer : (inp.value === "true") === q.answer;
+          if (isCorrectOpt) label.classList.add("correct");
+          else if (checked === inp) label.classList.add("incorrect");
+        });
+        const note = document.getElementById("note_hw_" + q.num);
+        if (note) {
+          note.classList.add("show");
+          note.innerHTML = (ok ? "<strong>Chính xác.</strong> " : "<strong>Chưa đúng.</strong> ") + q.explain;
+        }
+      });
+    });
+  }
+
+  const scoreBox = document.getElementById("score_" + key);
+  scoreBox.style.display = "block";
+  scoreBox.innerHTML = '<p>Điểm của em</p><p><strong>' + correct + ' / ' + total + '</strong></p>';
+
+  logAttempt(key, correct, total);
+}
+
+function logAttempt(key, correct, total) {
+  const name = document.getElementById("studentName").value.trim();
+  const storeKey = "listeningAttempts_" + key + "_" + name;
+  let list = [];
+  try { list = JSON.parse(localStorage.getItem(storeKey) || "[]"); } catch (e) { list = []; }
+  list.push({ score: correct, total: total, time: new Date().toLocaleString("vi-VN") });
+  try { localStorage.setItem(storeKey, JSON.stringify(list)); } catch (e) { /* localStorage không khả dụng */ }
+  renderAttempts(key);
+}
+
+function renderAttempts(key) {
+  const name = document.getElementById("studentName").value.trim();
+  const box = document.getElementById("attempts_" + key);
+  if (!box) return;
+  if (!name) { box.innerHTML = '<div class="attempts-empty">Ghi tên vào rồi nộp bài, lịch sử làm bài sẽ hiện ở đây.</div>'; return; }
+  const storeKey = "listeningAttempts_" + key + "_" + name;
+  let list = [];
+  try { list = JSON.parse(localStorage.getItem(storeKey) || "[]"); } catch (e) { list = []; }
+  if (list.length === 0) { box.innerHTML = '<div class="attempts-empty">Chưa có lần nộp bài nào.</div>'; return; }
+  let html = '<table class="attempts-table"><tr><th>Lần</th><th>Điểm</th><th>Thời gian</th></tr>';
+  list.forEach((a, i) => {
+    html += '<tr><td>Lần ' + (i + 1) + '</td><td>' + a.score + ' / ' + a.total + '</td><td>' + a.time + '</td></tr>';
+  });
+  html += '</table>';
+  box.innerHTML = html;
+}
+
+document.getElementById("studentName").addEventListener("input", () => {
+  document.getElementById("nameBox").classList.remove("field-error");
+  renderAttempts("classwork");
+  renderAttempts("homework");
+});
+
+// ===================== TABS =====================
+document.querySelectorAll(".tab-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".panel").forEach(p => p.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById("panel-" + btn.dataset.tab).classList.add("active");
+  });
+});
+</script>
+</body>
+</html>
